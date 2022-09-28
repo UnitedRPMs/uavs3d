@@ -1,11 +1,11 @@
-%global commit0 e58e199ccc50163c20df114db7e3950295c3e2ed
+%global commit0 0133ee4b4bbbef7b88802e7ad019b14b9b852c2b
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
 %global gver .git%{shortcommit0}
 
 Name:		uavs3d
 Summary:	AVS3 decoder library
 Version:	1.1
-Release:	1%{dist}
+Release:	2%{dist}
 License:	BSD
 Source0:	https://github.com/uavs3/uavs3d/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 URL:		https://github.com/uavs3/uavs3d
@@ -51,6 +51,9 @@ mkdir -p build
 %{_libdir}/pkgconfig/uavs3d.pc
 
 %changelog
+
+* Wed Sep 21 2022 Unitedrpms Project <unitedrpms AT protonmail DOT com> 1.1-2
+- Updated to current commit
 
 * Fri Feb 04 2022 Unitedrpms Project <unitedrpms AT protonmail DOT com> 1.1-1
 - Initial build
